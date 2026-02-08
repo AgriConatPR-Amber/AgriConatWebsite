@@ -1,79 +1,56 @@
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 10px;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #FFFFFF;
-    color: #2E7D32;
-    line-height: 1.6;
-    transition: background-color 0.3s;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
 }
 
-h1, h2, h3 {
-    color: #2E7D32;
-    font-weight: bold;
-    margin-bottom: 1rem;
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  background-color: #2E7D32;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
 }
 
 .button {
-    background-color: #A5D6A7;
-    color: #FFFFFF;
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+  background-color: #A5D6A7;
+  color: #2E7D32;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: #2E7D32;
-    transform: scale(1.05);
+  background-color: #2E7D32;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {
-    body {
-        padding: 1rem;
-    }
+  .container {
+    padding: 5px;
+  }
+  .header, .button {
+    padding: 15px 0;
+  }
 }
 
-/* Smooth scrolling for all links */
-a {
-    transition: color 0.3s;
-}
-a:hover {
-    color: #8D6E63;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Responsive classes */
-.col {
-    flex: 1;
-    padding: 1rem;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* Animation on scroll */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Earth brown background for footer or sections */
-.footer {
-    background-color: #8D6E63;
-    color: #FFFFFF;
-    padding: 1rem;
-    text-align: center;
+.fadeIn {
+  animation: fadeIn 1s ease-in;
 }
