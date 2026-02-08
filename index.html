@@ -3,71 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgriConat Website</title>
+    <meta name="description" content="AgriConat - Premium agricultural products and varieties.">
+    <title>AgriConat | Premium Agriculture Solutions</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#advantages">Advantages</a></li>
-            <li><a href="#varieties">Varieties</a></li>
-            <li><a href="#care-guide">Care Guide</a></li>
-            <li><a href="#catalog">Catalog</a></li>
-            <li><a href="#about-us">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <section id="hero">
-        <h1>Welcome to AgriConat</h1>
-        <img src="placeholder1.jpg" alt="Hero Image Placeholder">
-    </section>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <!-- If you have a logo image (e.g., logo.png), use this: -->
+                <!-- <img src="images/logo.png" alt="AgriConat Logo" class="logo-img"> -->
+                AgriConat
+            </div> 
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#advantages">Advantages</a></li>
+                    <li><a href="#varieties">Varieties</a></li>
+                    <li><a href="#care-guide">Care Guide</a></li>
+                    <li><a href="#catalog">Catalog</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <section id="advantages">
-        <h2>Advantages</h2>
-        <ul>
-            <li>Advantage 1</li>
-            <li>Advantage 2</li>
-            <li>Advantage 3</li>
-        </ul>
-    </section>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <h1>Welcome to AgriConat</h1>
+                <p>Your partner in sustainable agriculture and premium varieties.</p>
+                <!-- UPDATED PATH -->
+                <img src="images/placeholder1.jpg" alt="Hero Image" class="hero-image">
+            </div>
+        </section>
 
-    <section id="varieties">
-        <h2>Varieties</h2>
-        <ul>
-            <li>Variety 1</li>
-            <li>Variety 2</li>
-            <li>Variety 3</li>
-        </ul>
-    </section>
+        <!-- Advantages Section -->
+        <section id="advantages" class="section">
+            <div class="container">
+                <h2 class="section-title">Our Advantages</h2>
+                <div class="grid-wrapper">
+                    <div class="card">
+                        <h3>Advantage 1</h3>
+                        <p>Short description of the first advantage.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Advantage 2</h3>
+                        <p>Short description of the second advantage.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Advantage 3</h3>
+                        <p>Short description of the third advantage.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="care-guide">
-        <h2>Care Guide</h2>
-        <p>Information about care guide here.</p>
-        <img src="placeholder2.jpg" alt="Care Guide Image Placeholder">
-    </section>
+        <!-- Varieties Section -->
+        <section id="varieties" class="section alt-bg">
+            <div class="container">
+                <h2 class="section-title">Our Varieties</h2>
+                <ul class="feature-list">
+                    <li><strong>Variety 1:</strong> Description of variety 1.</li>
+                    <li><strong>Variety 2:</strong> Description of variety 2.</li>
+                    <li><strong>Variety 3:</strong> Description of variety 3.</li>
+                </ul>
+            </div>
+        </section>
 
-    <section id="catalog">
-        <h2>Catalog</h2>
-        <p>Explore our catalog of products.</p>
-        <img src="placeholder3.jpg" alt="Catalog Image Placeholder">
-    </section>
+        <!-- Care Guide Section -->
+        <section id="care-guide" class="section">
+            <div class="container">
+                <div class="text-image-split">
+                    <div class="text-content">
+                        <h2>Care Guide</h2>
+                        <p>Information about care guide here. Follow these steps to ensure the best growth for your crops.</p>
+                    </div>
+                    <div class="image-content">
+                        <!-- UPDATED PATH -->
+                        <img src="images/placeholder2.jpg" alt="Care Guide" class="section-image">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="about-us">
-        <h2>About Us</h2>
-        <p>Learn more about our company.</p>
-        <img src="placeholder4.jpg" alt="About Us Image Placeholder">
-    </section>
+        <!-- Catalog Section -->
+        <section id="catalog" class="section alt-bg">
+            <div class="container">
+                <h2 class="section-title">Product Catalog</h2>
+                <p>Explore our catalog of products.</p>
+                <!-- UPDATED PATH -->
+                <img src="images/placeholder3.jpg" alt="Catalog Preview" class="section-image full-width">
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Get in touch with us.</p>
-        <img src="placeholder5.jpg" alt="Contact Image Placeholder">
-    </section>
+        <!-- About Us Section -->
+        <section id="about-us" class="section">
+            <div class="container">
+                <h2 class="section-title">About Us</h2>
+                <p>Learn more about our company and our mission to revolutionize agriculture.</p>
+                <!-- UPDATED PATH -->
+                <img src="images/placeholder4.jpg" alt="About AgriConat" class="section-image full-width">
+            </div>
+        </section>
 
-    <footer>
-        <p>&copy; 2026 AgriConat. All rights reserved.</p>
+        <!-- Contact Section -->
+        <section id="contact" class="section alt-bg">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <p>Get in touch with us for inquiries and orders.</p>
+                <div class="contact-info">
+                    <p>Email: info@agriconat.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 AgriConat. All rights reserved.</p>
+        </div>
     </footer>
+
 </body>
 </html>
