@@ -1,28 +1,4 @@
-// Security Features Implementation
-
-// Bot detection
-const botUserAgents = ['bot', 'crawler', 'slurp', 'spider'];
-function isBot(userAgent) {
-    return botUserAgents.some(bot => userAgent.toLowerCase().includes(bot));
-}
-
-// Rate limiting on form submissions
-let submitCount = 0;
-const submitLimit = 5; // Max 5 submissions
-const timeFrame = 60000; // 1 minute
-let lastSubmitTime = 0;
-
-function canSubmit() {
-    const currentTime = new Date().getTime();
-    if (currentTime - lastSubmitTime < timeFrame) {
-        return submitCount < submitLimit;
-    }
-    submitCount = 0; // reset count if time frame passed
-    lastSubmitTime = currentTime;
-    return true;
-}
-
-// Smooth scroll animations
+// Smooth scrolling for anchor links
 const links = document.querySelectorAll('a[href^="#"]');
 for (const link of links) {
     link.addEventListener('click', function(e) {
@@ -34,19 +10,48 @@ for (const link of links) {
     });
 }
 
-// Right-click protection
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-});
+// Rate limiting for form submissions
+let submitCount = 0;
+const submitLimit = 5;
+const timeFrame = 60000; // 1 minute
+let lastSubmitTime = 0;
 
-// Visitor tracking
+function canSubmit() {
+    const now = Date.now();
+    if (now - lastSubmitTime < timeFrame) {
+        return submitCount < submitLimit;
+    }
+    submitCount = 0;
+    lastSubmitTime = now;
+    return true;
+}
+
+// Contact form handling (demo – add real backend later)
+const form = document.getElementById('contact-form');
+if (form) {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (!canSubmit()) {
+            alert('You have reached the submission limit for now. Please try again in a minute.');
+            return;
+        }
+        submitCount++;
+        lastSubmitTime = Date.now();
+        alert('Thank you! Your message has been sent. (This is a demo – no real email sent)');
+        form.reset();
+    });
+}
+
+// Visitor tracking (simple counter)
 (function() {
-    const visits = localStorage.getItem('visits') || 0;
-    localStorage.setItem('visits', Number(visits) + 1);
-})(); 
+    let visits = parseInt(localStorage.getItem('visits') || '0', 10);
+    visits += 1;
+    localStorage.setItem('visits', visits);
+    console.log(`This is visit number ${visits} to the AgriConat ZZ Plant site.`);
+})();
 
-// Safety measures against automated access
-if (isBot(navigator.userAgent)) {
-    alert('Access not permitted for bots.');
-    window.location.href = 'about:blank'; 
-} // Redirecting bots
+// Optional: Soft bot detection (log only, no block)
+const botUserAgents = ['bot', 'crawler', 'slurp', 'spider'];
+if (botUserAgents.some(bot => navigator.userAgent.toLowerCase().includes(bot))) {
+    console.log('Bot-like user agent detected.');
+}
